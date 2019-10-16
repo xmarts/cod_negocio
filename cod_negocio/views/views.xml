@@ -1,0 +1,20 @@
+<odoo>
+  <data>
+     <record model='ir.ui.view' id="xmarts_res_partner_cod">
+        <field name="name">xmarts_res_partner_codigo</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+           <xpath expr="//notebook/page[@name='sales_purchases']/group/group[@name='sale']/field[@name='user_id']" position="after">
+            <field name="cod_negocio" />
+            <field name="cod_programa" />     
+
+            
+            </xpath> 
+
+             
+      
+        </field>
+      </record>
+  </data>
+</odoo>

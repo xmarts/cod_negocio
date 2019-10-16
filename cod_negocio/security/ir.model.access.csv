@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cod_negocio_cod_negocio,cod_negocio.cod_negocio,model_cod_negocio_cod_negocio,,1,0,0,0
