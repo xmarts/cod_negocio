@@ -3,8 +3,7 @@
     'name': "cod_negocio",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        agrega campos a los contactos""",
 
     'description': """
         Long description of module's purpose
@@ -20,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','l10n_mx_edi'],
 
     # always loaded
     'data': [
