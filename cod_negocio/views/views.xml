@@ -8,10 +8,22 @@
            <xpath expr="//notebook/page[@name='sales_purchases']/group/group[@name='sale']/field[@name='user_id']" position="after">
             <field name="cod_negocio" />
             <field name="cod_programa" />   
-            <field name="cod_zona"/>  
+            <field name="cod_zona"/>
+            <field name="ruta_venta"/> 
+            <field name="cod_de_vendedor"/>  
+            </xpath> 
+
+              <xpath expr="//notebook/page[@name='sales_purchases']/group/group[@name='sale']/field[@name='user_id']" position="after">
+            <field name="cod_negocio" />
+            <field name="cod_programa" />   
+            <field name="cod_zona"/>
+            <field name="ruta_venta"/> 
+            <field name="cod_de_vendedor"/>  
+            </xpath> 
+
 
             
-            </xpath> 
+
           
       
         </field>
@@ -31,6 +43,56 @@
       
         </field>
       </record>
+
+          <record model='ir.ui.view' id="xmarts_res_partner_account">
+        <field name="name">xmarts_res_partner_account</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form" />
+        <field name="arch" type="xml">
+          
+            <xpath expr="//notebook/page[@name='accounting']/group/group[@name='accounting_entries']" position="after">
+              <group string="datos facturacion" name="datos_facturacion">
+            <field name="payment_method_id" />
+            <field name="mx_edi_usage" />   
+          </group>
+            </xpath> 
+
+           
+      
+      
+        </field>
+      </record>
+
+          <record model='ir.ui.view' id="xmarts_res_partner_manibras">
+        <field name="name">xmarts_res_partner_manibras</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base_geolocalize.view_crm_partner_geo_form" />
+        <field name="arch" type="xml">
+          
+            <xpath expr="//notebook/page[@name='geo_location']" position="after">
+              <page string="Maniobras" name="maniobras">
+              <group string="Maniobras" name="datos_facturacion">
+            <field name="tarimas" widget="radio" />
+            <field name="pagar" />   
+            <field name="flete_externo" widget="radio" />
+
+
+
+          </group>
+        </page>
+            </xpath> 
+
+           
+      
+      
+        </field>
+      </record>
+
+
+        
+
+
+      
 
   </data>
 </odoo>
