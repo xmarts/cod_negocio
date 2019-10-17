@@ -11,18 +11,7 @@
             <field name="cod_zona"/>
             <field name="ruta_venta"/> 
             <field name="cod_de_vendedor"/>  
-            </xpath> 
-
-              <xpath expr="//notebook/page[@name='sales_purchases']/group/group[@name='sale']/field[@name='user_id']" position="after">
-            <field name="cod_negocio" />
-            <field name="cod_programa" />   
-            <field name="cod_zona"/>
-            <field name="ruta_venta"/> 
-            <field name="cod_de_vendedor"/>  
-            </xpath> 
-
-
-            
+            </xpath>  
 
           
       
