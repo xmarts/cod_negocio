@@ -212,7 +212,9 @@ class cod_digo_negicio(models.Model):
         'customer. \nNote: It is not cause for cancellation if the key set is '
         'not the usage that will give the receiver of the document.')
 
-
+    dias_entrega = fields.Integer(
+        string='Días de entrega',
+    )
 
 
 
@@ -239,7 +241,7 @@ class campos_maniobras(models.Model):
             ('si', 'Si'),
             ('no', 'No'),          
                     
-        ], default='si', string="Flete externo")
+        ], default='si', string="Dejar tarimas")
 
     pagar = fields.Float(
         string='Pagar maniobras',
