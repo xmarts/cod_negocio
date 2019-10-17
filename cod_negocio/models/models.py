@@ -224,7 +224,7 @@ class cod_digo_negicio(models.Model):
             ('si', 'Si'),
             ('no', 'No'),          
                     
-        ], default='si', string="Dejar tarimas")
+        ], default='si', string="Flete externo")
 
     pagar = fields.Float(
         string='Pagar maniobras',
