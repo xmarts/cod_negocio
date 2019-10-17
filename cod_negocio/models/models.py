@@ -214,6 +214,21 @@ class cod_digo_negicio(models.Model):
 
 
 
+
+
+class campos_facturas(models.Model):
+    _inherit = 'account.invoice'
+                    
+
+    @api.onchange('partner_id')
+    def _onchange_partner_id(self):
+        self.l10n_mx_edi_usage = self.partner_id.mx_edi_usage
+        self.l10n_mx_edi_payment_method_id = self.partner_id.payment_method_id        
+
+
+class campos_maniobras(models.Model):
+    _inherit = 'sale.order'
+
     tarimas = fields.Selection([
             ('si', 'Si'),
             ('no', 'No'),          
@@ -229,18 +244,7 @@ class cod_digo_negicio(models.Model):
     pagar = fields.Float(
         string='Pagar maniobras',
     )
-
-
-
-
-class campos_facturas(models.Model):
-    _inherit = 'account.invoice'
                     
-
-    @api.onchange('partner_id')
-    def _onchange_partner_id(self):
-        self.l10n_mx_edi_usage = self.partner_id.mx_edi_usage
-        self.l10n_mx_edi_payment_method_id = self.partner_id.payment_method_id        
 
 
 
