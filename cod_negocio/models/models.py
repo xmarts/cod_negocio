@@ -215,8 +215,7 @@ class cod_digo_negicio(models.Model):
     dias_entrega = fields.Integer(
         string='Días de entrega',
     )
-    campo_prueba = fields.Char(string="Campo de prueba")
-
+    
 class campos_facturas(models.Model):
     _inherit = 'account.invoice'
                     
