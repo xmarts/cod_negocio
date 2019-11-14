@@ -2,8 +2,19 @@
 
 from odoo import models, fields, api
 
+class Cod_vendedor(models.Model):
+    _name = "cod.vendedor"
+    codigo = fields.Integer(
+        string='Código',
+    )
+    name = fields.Char(string="Nombre")
+  
+
+
 class cod_digo_negicio(models.Model):
     _inherit = 'res.partner'
+
+    cod_vendedor = fields.Many2one('cod.vendedor', string="Codigo Vendedor")
 
     cod_negocio = fields.Selection([
             ('no_definido', 'No definido'),
