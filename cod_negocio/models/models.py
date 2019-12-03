@@ -14,6 +14,18 @@ class Cod_vendedor(models.Model):
 class cod_digo_negicio(models.Model):
     _inherit = 'res.partner'
 
+    tarimas = fields.Selection([
+            ('si', 'Si'),
+            ('no', 'No'),          
+                    
+        ], default='si', string="Dejar tarimas")
+
+    flete_externo = fields.Selection([
+            ('si', 'Si'),
+            ('no', 'No'),          
+                    
+        ], default='si', string="Flete Externo")
+
     cod_vendedor = fields.Many2one('cod.vendedor', string="Codigo Vendedor")
 
     cod_negocio = fields.Selection([
@@ -250,12 +262,17 @@ class campos_maniobras(models.Model):
             ('si', 'Si'),
             ('no', 'No'),          
                     
-        ], default='si', string="Dejar tarimas")
+        ], default='si', string="Flete Externo")
 
     pagar = fields.Float(
         string='Pagar maniobras',
     )
                     
+    @api.@api.onchange('partner_id')
+    def _onchange_partner_id_mani(self):
+        self.tarimas = self.partner_id.tarimas
+        self.flete_externo = self.partner_id.flete_externo
+            
 
 
 

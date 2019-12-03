@@ -41,6 +41,8 @@
           <group string="datos facturacion" name="datos_facturacion">
             <field name="payment_method_id" />
             <field name="mx_edi_usage" />
+            <field name="tarimas" />
+            <field name="flete_externo" />
           </group>
         </xpath> 
       </field>
