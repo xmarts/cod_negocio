@@ -121,7 +121,7 @@ class cod_digo_negicio(models.Model):
             ('mexico', 'México'),
             ('bajio', 'Bajio'),
             ('mov_otras_sucursal', 'Mov. otras sucursal'),           
-        ], default='retiros_depositos', string="Código zona")
+        ], default='retiros_depositos', string="Código Zona/Ruta")
 
     ruta_venta = fields.Selection([
             ('acatlan', 'Acatlan'),
@@ -162,42 +162,42 @@ class cod_digo_negicio(models.Model):
         ], default='acatlan', string="Ruta Venta")
    
 
-    cod_de_vendedor = fields.Selection([
-            ('autoservicion', 'AUTOSERVICIOS'),
-            ('cuenca', 'CUENCA'),
-            ('cuenca_1', 'CUENCA 1'),
-            ('mexico', 'MEXICO'),
-            ('chiapas', 'CHIAPAS'),
-            ('merida_villahermoza_coatzacoalcos', 'MERIDA, VILLAHERMOSA Y COATZACOALCOS'),
-            ('puebla', 'PUEBLA'),
-            ('salvador_ros', 'SALVADOR ROS'),
-            ('tampico', 'TAMPICO'),
-            ('distribuidora_cordoba', 'Distribuidora Cordoba'),
-            ('distribuidora_orizaba', 'Distribuidora Orizaba'),
-            ('distribuidora_veracruz', 'Distribuidora Veracruz'),
-            ('distribuidora_tuxtepec', 'Distribuidora Tuxtepec'),
-            ('distribuidora_cardel', 'Distribuidora Cardel'),
-            ('distribuidora_cosamaloapan', 'Distribuidora Cosamaloapan'),
-            ('distribuidora_tierra_blanca', 'Distribuidora Tierra Blanca'),
-            ('distribuidora_puebla', 'Distribuidora Puebla'),
-            ('distribuidora_minatitlan', 'Distribuidora Minatitlan'),
-            ('distribuidora_xalapa', 'Distribuidora Xalapa'),
-            ('tampico_1', 'TAMPICO 1'),
-            ('eduardo_corral', 'Eduardo Corral'),
-            ('sin_agente', 'Sin Agente'),
-            ('tehuacan_y_oaxaca', 'TEHUACAN Y OAXACA'),
-            ('centralizados', 'CENTRALIZADOS'),
-            ('tuist', 'TUIST'),
-            ('bamba_coco', 'BAMBA COCO'),
-            ('juan_roman_rojas', 'Juan Roman Rojas'),
-            ('mexico', 'MEXICO'),
-            ('comercial_mexicana', 'Comercial Mexicana'),
-            ('maquila_chedraui', 'Maquila Chedraui'),
-            ('maquila', 'MAQUILA'),
-            ('maquila_2', 'MAQUILA 2'),
-            ('maquila_1', 'MAQUILA 1'),
+    # cod_de_vendedor = fields.Selection([
+    #         ('autoservicion', 'AUTOSERVICIOS'),
+    #         ('cuenca', 'CUENCA'),
+    #         ('cuenca_1', 'CUENCA 1'),
+    #         ('mexico', 'MEXICO'),
+    #         ('chiapas', 'CHIAPAS'),
+    #         ('merida_villahermoza_coatzacoalcos', 'MERIDA, VILLAHERMOSA Y COATZACOALCOS'),
+    #         ('puebla', 'PUEBLA'),
+    #         ('salvador_ros', 'SALVADOR ROS'),
+    #         ('tampico', 'TAMPICO'),
+    #         ('distribuidora_cordoba', 'Distribuidora Cordoba'),
+    #         ('distribuidora_orizaba', 'Distribuidora Orizaba'),
+    #         ('distribuidora_veracruz', 'Distribuidora Veracruz'),
+    #         ('distribuidora_tuxtepec', 'Distribuidora Tuxtepec'),
+    #         ('distribuidora_cardel', 'Distribuidora Cardel'),
+    #         ('distribuidora_cosamaloapan', 'Distribuidora Cosamaloapan'),
+    #         ('distribuidora_tierra_blanca', 'Distribuidora Tierra Blanca'),
+    #         ('distribuidora_puebla', 'Distribuidora Puebla'),
+    #         ('distribuidora_minatitlan', 'Distribuidora Minatitlan'),
+    #         ('distribuidora_xalapa', 'Distribuidora Xalapa'),
+    #         ('tampico_1', 'TAMPICO 1'),
+    #         ('eduardo_corral', 'Eduardo Corral'),
+    #         ('sin_agente', 'Sin Agente'),
+    #         ('tehuacan_y_oaxaca', 'TEHUACAN Y OAXACA'),
+    #         ('centralizados', 'CENTRALIZADOS'),
+    #         ('tuist', 'TUIST'),
+    #         ('bamba_coco', 'BAMBA COCO'),
+    #         ('juan_roman_rojas', 'Juan Roman Rojas'),
+    #         ('mexico', 'MEXICO'),
+    #         ('comercial_mexicana', 'Comercial Mexicana'),
+    #         ('maquila_chedraui', 'Maquila Chedraui'),
+    #         ('maquila', 'MAQUILA'),
+    #         ('maquila_2', 'MAQUILA 2'),
+    #         ('maquila_1', 'MAQUILA 1'),
                     
-        ], default='autoservicion', string="Codigo de Vendedor")
+    #     ], default='autoservicion', string="Codigo de Vendedor")
 
 
     payment_method_id = fields.Many2one(
