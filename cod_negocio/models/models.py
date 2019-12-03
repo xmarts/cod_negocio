@@ -268,7 +268,7 @@ class campos_maniobras(models.Model):
         string='Pagar maniobras',
     )
                     
-    @api.@api.onchange('partner_id')
+    @api.onchange('partner_id')
     def _onchange_partner_id_mani(self):
         self.tarimas = self.partner_id.tarimas
         self.flete_externo = self.partner_id.flete_externo
