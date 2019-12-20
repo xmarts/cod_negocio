@@ -252,11 +252,7 @@ class campos_facturas(models.Model):
 class campos_maniobras(models.Model):
     _inherit = 'sale.order'
 
-    tarimas = fields.Selection([
-            ('si', 'Si'),
-            ('no', 'No'),          
-                    
-        ], default='si', string="Dejar tarimas")
+    tarimas = fields.Selection([('si', 'Si'),('no', 'No')], default='si', string="Dejar tarimas")
 
     flete_externo = fields.Selection([
             ('si', 'Si'),
@@ -264,10 +260,21 @@ class campos_maniobras(models.Model):
                     
         ], default='si', string="Flete Externo")
 
-    pagar = fields.Float(
-        string='Pagar maniobras',
-    )
-                    
+
+
+    pagar = fields.Float(string='Pagar maniobras')
+    peso = fields.Float(string="Peso en KG", compute="calcula_peso_total")
+
+    @api.one
+    @api.depends('order_line')
+    def calcula_peso_total(self):
+        if not self.order_line:
+            self.peso = 0
+        else:
+            for x in self.order_line:
+                self.peso += x.product_id.weight * x.product_uom_qty
+
+
     @api.onchange('partner_id')
     def _onchange_partner_id_mani(self):
         self.tarimas = self.partner_id.tarimas

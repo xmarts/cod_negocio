@@ -60,6 +60,9 @@
                 <field name="pagar" />   
                 <field name="flete_externo" widget="radio" />
               </group>
+              <group string="PESO" >
+                <field name="peso" />
+              </group>
             </page>
         </xpath>
       </field>
