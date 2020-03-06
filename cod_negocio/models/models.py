@@ -272,7 +272,7 @@ class campos_maniobras(models.Model):
             self.peso = 0
         else:
             for x in self.order_line:
-                self.peso += x.product_id.weight *x.product_uom.factor* x.product_uom_qty
+                self.peso += x.product_id.weight *x.product_uom.factor_inv* x.product_uom_qty
                
 
 
