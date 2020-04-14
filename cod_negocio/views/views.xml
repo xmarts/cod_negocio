@@ -56,6 +56,8 @@
         <xpath expr="//notebook/page[@name='other_information']" position="after">
             <page string="Maniobras" name="maniobras">
               <group string="Maniobras" name="datos_facturacion">
+                <field name="payment_method_id" />
+                <field name="mx_edi_usage" />
                 <field name="tarimas" widget="radio" />
                 <field name="pagar" />   
                 <field name="flete_externo" widget="radio" />
@@ -68,7 +70,18 @@
       </field>
     </record>
 
-   
+    <record model='ir.ui.view' id="inherit_account_invoice_refund">
+      <field name="name">account.invoice.refund.inherit</field>
+      <field name="model">account.invoice.refund</field>
+      <field name="inherit_id" ref="account.view_account_invoice_refund" />
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='description']" position="after">
+              <field name="test" />   
+        </xpath>
+      </field>
+    </record>
+
+  
 
   </data>
 </odoo>
