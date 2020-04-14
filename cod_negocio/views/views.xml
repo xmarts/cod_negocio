@@ -70,7 +70,7 @@
       </field>
     </record>
 
-    <record model='ir.ui.view' id="inherit_account_invoice_refund">
+  <!--   <record model='ir.ui.view' id="inherit_account_invoice_refund">
       <field name="name">account.invoice.refund.inherit</field>
       <field name="model">account.invoice.refund</field>
       <field name="inherit_id" ref="account.view_account_invoice_refund" />
@@ -79,7 +79,7 @@
               <field name="test" />   
         </xpath>
       </field>
-    </record>
+    </record> -->
 
   
 
