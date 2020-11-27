@@ -67,14 +67,15 @@ class cod_digo_negicio(models.Model):
             ('dif', 'DIF'),
             ('techin', 'Techin'),
             ('sidernet', 'Sidernet'),
-            ('x24', '7/24'),
+            ('x24', 'X24'),
             ('tiendas_imss', 'Tiendas IMSS'),
             ('tiendas_isste', 'Tiendas ISSSTE'),
             ('los_leones', 'Los Leones'),
             ('tiendas_lores', 'Tiendas Lores'),
             ('depositos_jarocho', 'Depositos Jarocho'),
-            ('yepas', 'Yepas'),
+            ('supf', 'Super Fasti'),
             ('bc_comercio', 'Bc Comercio'),
+            ('frm_gdl', 'Farm. GDL'),
         ],  default='no_definido', string="Código Negocio")
 
     cod_programa = fields.Selection([
