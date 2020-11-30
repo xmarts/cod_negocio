@@ -76,6 +76,8 @@ class cod_digo_negicio(models.Model):
             ('supf', 'Super Fasti'),
             ('bc_comercio', 'Bc Comercio'),
             ('frm_gdl', 'Farm. GDL'),
+            ('super_smart', 'Super Smart'),
+            ('italian_coffe', 'Italian Coffe'),
         ],  default='no_definido', string="Código Negocio")
 
     cod_programa = fields.Selection([
