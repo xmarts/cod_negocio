@@ -13,6 +13,11 @@ class Cod_vendedor(models.Model):
     )
     name = fields.Char(string="Nombre")
   
+class CodNegocio(models.Model):
+    _name = 'code.negocio'
+
+    code = fields.Char(string="Codigo")
+    name = fields.Char(string="Nombre")
 
 
 class cod_digo_negicio(models.Model):
@@ -31,6 +36,8 @@ class cod_digo_negicio(models.Model):
         ], default='si', string="Flete Externo")
 
     cod_vendedor = fields.Many2one('cod.vendedor', string="Codigo Vendedor")
+
+    code_nego_id = fields.Many2one('code.negocio', string="CNegocio")
 
     cod_negocio = fields.Selection([
             ('no_definido', 'No definido'),

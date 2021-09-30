@@ -7,6 +7,7 @@
       <field name="arch" type="xml">
         <xpath expr="//notebook/page[@name='sales_purchases']/group/group[@name='sale']/field[@name='user_id']" position="after">
           <field name="cod_negocio" />
+          <field name="code_nego_id"/>
           <field name="cod_programa" />   
           <field name="cod_zona"/>
           <field name="ruta_venta" invisible="1"/> 
@@ -80,7 +81,47 @@
         </xpath>
       </field>
     </record> -->
+        <record model="ir.ui.view" id="codigo_negocio_xma_form">
+            <field name="name">Codigo Negocio</field>
+            <field name="model">code.negocio</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
 
+        <record model="ir.ui.view" id="codigo_negocio_xma_tree">
+            <field name="name">Codigo Negocio</field>
+            <field name="model">code.negocio</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="code"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="codigo_negocio_xma_action">
+        <field name="name">Codigo de Negocio</field>
+        <field name="res_model">code.negocio</field>
+        <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Codigo de Negocio"
+            id="codigo_negocio_xma_menu"
+            parent="contacts.res_partner_menu_config"
+            action="codigo_negocio_xma_action"
+        />
   
 
   </data>
