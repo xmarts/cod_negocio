@@ -70,7 +70,7 @@ class AccountMove(models.Model):
     #     return values
 
     # @api.multi
-    @api.returns('self')
+    @api.returns('self')  # FIXME: Revisar esta parte
     def refund(self, date_invoice=None, date=None, description=None, journal_id=None):
         new_invoices = self.browse()
         for invoice in self:
