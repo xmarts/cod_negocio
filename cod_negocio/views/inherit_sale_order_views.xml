@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model='ir.ui.view' id="xmarts_sale_order">
+        <field name="name">xmarts_sale_order</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[@name='other_information']" position="after">
+                  <page string="Maniobras" name="maniobras">
+                      <group string="Maniobras" name="datos_facturacion">
+                          <field name="payment_method_id" />
+                          <field name="mx_edi_usage" />
+                          <field name="tarimas" widget="radio" />
+                          <field name="pagar" />
+                          <field name="flete_externo" widget="radio" />
+                      </group>
+                      <group string="PESO" >
+                          <field name="peso" />
+                      </group>
+                  </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

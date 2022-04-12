@@ -1,6 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-
-
-access_cod_vendedor,cod.vendedor,model_cod_vendedor,base.group_user,1,0,0,0
-access_cod_vendedor,cod.vendedor,model_cod_vendedor,base.group_erp_manager,1,1,1,1
+access_cod_vendedor1,cod.vendedor,model_cod_vendedor,base.group_user,1,0,0,0
+access_cod_vendedor2,cod.vendedor,model_cod_vendedor,base.group_erp_manager,1,1,1,1
 access_code_negocio,code.negocio,model_code_negocio,,1,1,1,1
