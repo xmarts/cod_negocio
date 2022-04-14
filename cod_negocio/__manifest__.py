@@ -4,7 +4,7 @@
     'summary': """Agrega campos a los contactos""",
     'description': """Long description of module's purpose""",
     'author': "Xmarts",
-    'contributors': "javier.hilario@xmarts.com",
+    'contributors': "daviddiaz@xmarts.com, javier.hilario@xmarts.com",
     'website': "http://www.xmarts.com",
     'category': 'Uncategorized',
     'version': '15.0.1.0.0',
