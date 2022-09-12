@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
             <xpath expr="//notebook/page[@name='sales_purchases']/group/group[@name='sale']/field[@name='user_id']" position="after">
-                <field name="cod_negocio" />
+                <!-- <field name="cod_negocio" /> -->
                 <field name="code_nego_id"/>
                 <field name="cod_programa" />
                 <field name="cod_zona"/>
